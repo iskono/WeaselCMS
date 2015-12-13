@@ -31,7 +31,7 @@ function CMS_DATA() {
 			$db_slugs[] = $row['slug'];
 
 			$_DATA['pages'][$key]['link'] = (in_array('mod_rewrite', apache_get_modules())) 
-				? dirname($_SERVER['PHP_SELF']) .'/'. $row['slug'] . '.cms' // Match it with the .htaccess file
+				? dirname($_SERVER['PHP_SELF']) .''. $row['slug'] . '.cms' // Match it with the .htaccess file
 				: 'index.php?p=' . $row['slug'];
 
 			unset($_DATA['pages'][$key]['order']);
