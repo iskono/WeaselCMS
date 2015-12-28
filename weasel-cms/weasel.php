@@ -97,7 +97,7 @@ function CMS_DATA() {
 	$_DATA['is_404'] = false;
 
 	// Navigation Menu output
-	$_DATA['menu'] = '<ul>';
+	$_DATA['menu'] = '<ul class="nav navbar-nav">';
 	foreach ($_DATA['pages'] as $_PAGEITEM) {
 		$current = ($_PAGEITEM['slug'] == $_DATA['page']['slug']) ? ' class="active"' : '';
 		$_DATA['menu'] .= '<li'.$current.'>';
